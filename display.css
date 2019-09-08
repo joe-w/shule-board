@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'shmulik';
+  src: url('./fonts/shmulik/shmulikclm-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/shmulik/shmulikclm-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'stam';
+  src: url('./fonts/stam/stamashkenazclm-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/stam/stamashkenazclm-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'miri';
+  src: url('./fonts/miri/miriwin-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/miri/miriwin-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'shofar';
+  src: url('./fonts/shofar/shofarregular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/shofar/shofarregular-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+div.panel {
+  margin: 10px 20px;
+  padding: 1px 20px;
+  display: grid;
+  text-align: right;
+}
+
+.logo {
+    line-height: 1;
+    margin-top: 30px;
+    margin-right: 30px;
+    font-size: 4em;
+}
+
+.parsha {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.candle {
+    width: 90%;
+    font-size: 2em;
+    line-height: 0.3em;
+}
+
+.section {
+    margin: 10px 0px;
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 15px;
+    align: center;
+}
+
+.title {
+    width: auto;
+    float: right;
+    margin-top: -0.4em;
+    margin-right: 20px;
+    padding: 0px 10px;
+    opacity: 1;
+    font-size: 2em;
+    line-height: 0.6em;
+}
+
+.item {
+    font-weight: normal;
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
+}
+.name {
+    direction: rtl;
+    float: right
+}
+
+.comment {
+    direction: rtl;
+    font-size: 0.7em;
+    line-height: 1em;
+    float: right;
+    padding: 0.5em 0.5em;
+}
+
+.time {
+    float: left
+}
+
+body {
+   x-transform: scale(0.4);
+   x-transform-origin: 0 0;
+}
+
+div.bg {
+  x-transform: rotate(-90deg);
+  x-transform-origin: 35cm 20cm;
+  display: grid;
+  height: 70cm;
+  width: 40cm;
+  padding: 10px;
+  /* base font size, everything else should #em */
+  font-size: 28;
+  font-weight: bold;
+}
+
+div.banner {
+}
+
+div.main {
+}
+
+div.announce {
+}
+
+.announcement {
+    direction: rtl;
+    font-size: 2em;
+    font-style: italic;
+    margin: auto;
+}
+
+.footer {
+    color: black;
+    direction: rtl;
+    font-style: italic;
+    margin: auto;
+    margin-top: -0.2em;
+}

@@ -1,0 +1,41 @@
+:root {
+    --color1: #004000;
+    --color2: #F5F5DC;
+}
+div.bg {
+  background-image: url("./jstone2.jpg");
+  background-size: 100% 100%;
+  x-background-size: cover;
+}
+
+div.panel {
+  opacity: 0.8;
+  color: var(--color2);
+  font-size: 28;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+div.banner {
+  opacity: 0.75;
+  background-color: var(--color1);
+  text-shadow: 5px 5px 5px #A0522D;
+}
+
+div.main {
+  color: var(--color1);
+  background-color: var(--color2);
+  opacity: 0.90;
+}
+
+.title {
+  background-color: var(--color2);
+}
+
+div.announce {
+  background-color: var(--color1);
+}
+
+div.footer {
+  background-color: grey
+}

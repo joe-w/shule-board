@@ -1,0 +1,47 @@
+:root {
+    --dark: #8B4513;
+    --xlight: #DAA520;
+    --light: goldenrod;
+}
+
+div.bg {
+  background-image: url("./parchment3.jpg");
+  background-size: cover;
+  font-family: shofar;
+  font-weight: bold;
+}
+
+div.panel {
+  opacity: 1;
+  color: var(--dark);
+  border-radius: 10px;
+}
+
+div.banner {
+  color: var(--light);
+  opacity: 1;
+  background-image: url("./mahogany.jpg");
+  background-size: cover;
+  xtext-shadow: 3px 3px 3px gold;
+}
+
+div.main {
+  color: var(--dark);
+  opacity: 0.90;
+}
+
+.title {
+  background-color: wheat;
+}
+
+div.announce {
+  color: var(--light);
+  opacity: 1;
+  background-image: url("./mahogany.jpg");
+  background-size: cover;
+  text-shadow: 3px 3px 3px gold;
+}
+
+div.footer {
+  xbackground-color: lightgrey
+}
