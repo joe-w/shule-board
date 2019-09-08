@@ -24,16 +24,16 @@
 
 div.panel {
   margin: 10px 20px;
-  padding: 1px 20px;
+  padding: 10px 20px;
   display: grid;
   text-align: right;
 }
 
 .logo {
     line-height: 1;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: 30px;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .parsha {
@@ -62,16 +62,32 @@ div.panel {
     margin-right: 20px;
     padding: 0px 10px;
     opacity: 1;
-    font-size: 2em;
+    font-size: 2.3em;
+    font-weight: bolder;
     line-height: 0.6em;
+    xtext-decoration: underline;
 }
 
 .item {
     font-weight: normal;
     width: 80%;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
+
+.halfitem {
+    font-weight: normal;
+    font-size: 2.1em;
+    margin: 5px 10px;
+}
+
+.right {
+    padding-left: 15px;
+}
+.left {
+    padding-right: 15px;
+}
+
 .name {
     direction: rtl;
     float: right
@@ -86,7 +102,8 @@ div.panel {
 }
 
 .time {
-    float: left
+    float: left;
+    font-weight: bold;
 }
 
 body {
@@ -123,9 +140,9 @@ div.announce {
 }
 
 .footer {
-    color: black;
     direction: rtl;
     font-style: italic;
     margin: auto;
-    margin-top: -0.2em;
+    margin-top: -0.4em;
+    font-size: 1.2em;
 }

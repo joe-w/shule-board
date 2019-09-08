@@ -2,6 +2,7 @@
     --color1: #004000;
     --color2: #F5F5DC;
 }
+
 div.bg {
   background-image: url("./jstone2.jpg");
   background-size: 100% 100%;
@@ -37,5 +38,9 @@ div.announce {
 }
 
 div.footer {
-  background-color: grey
+  x-background-color: grey
+}
+
+.halfitem {
+    font-size: 1.9em;
 }
