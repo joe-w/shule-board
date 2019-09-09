@@ -1,7 +1,16 @@
 <html>
 <head>
     <link rel="stylesheet" href="./display.css"/>
-    <link rel="stylesheet" href="./stone-green.css"/>
+
+<script type="text/javascript">
+var urlParams = new URLSearchParams(window.location.search);
+var link = document.createElement( "link" );
+link.href = (urlParams.get('css') || 'stone-green') + '.css';
+link.type = "text/css";
+link.rel = "stylesheet";
+document.getElementsByTagName( "head" )[0].appendChild( link );
+</script>
+
 </head>
 <div class="bg" style="display: grid; xgrid-template-areas:
     'banner'
@@ -174,7 +183,7 @@
         </div>
         <div class="section">
           <div class="title">השבוע הקרוב</div><p/>
-          <div style="display: grid">
+          <div style="display: grid; font-size: 0.8em;">
 
             <div class="item">
                 <span class="name">שחרית - א' (ר"ח)</span>
