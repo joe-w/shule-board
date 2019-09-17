@@ -13,7 +13,10 @@ function loadJSON(path, callback) {
     xobj.send(null);  
 }
 
-loadJSON('test.json', alert)
+function debug(obj) {
+    alert(JSON.stringify(obj))
+}
+loadJSON('test.json', debug)
 
 </script>
 </head>
