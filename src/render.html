@@ -14,6 +14,8 @@ function loadJSON(path, callback) {
 }
 
 function debug(obj) {
+    console.log(obj)
+    console.log(JSON.stringify(obj))
     alert(JSON.stringify(obj))
 }
 loadJSON('test.json', debug)
