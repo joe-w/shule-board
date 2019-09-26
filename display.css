@@ -71,7 +71,7 @@ div.panel {
 
 .item {
     font-weight: normal;
-    width: 90%;
+    width: 80%;
     margin: auto;
     font-size: 1.7em;
 }
@@ -96,7 +96,7 @@ div.panel {
 
 .comment {
     direction: rtl;
-    font-size: 0.6em;
+    font-size: 0.7em;
     line-height: 1em;
     float: right;
     padding: 0.5em 0.5em;
