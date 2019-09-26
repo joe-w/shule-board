@@ -1,5 +1,6 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.3.1/handlebars.runtime.min.js"></script>
 <script>
 function loadJSON(path, callback) {   
     var xobj = new XMLHttpRequest();
@@ -13,16 +14,44 @@ function loadJSON(path, callback) {
     xobj.send(null);  
 }
 
-function debug(obj) {
+function render(obj) {
     console.log(obj)
     console.log(JSON.stringify(obj))
-    alert(JSON.stringify(obj))
+    times_t = document.getElementById("times_t").innerHTML
+    times_render = Handlebars.compile(times_t)
+    pages = []
+    for (page of obj.PAGES) {
+        pages.push(times_render(page))
+    }
+    page_div = document.getElementById("page")
+    page_div.innerHTML = pages[0]
 }
-loadJSON('test.json', debug)
 
+window.onload = function() {
+    alert('hello')
+    console.log
+    var urlParams = new URLSearchParams(window.location.search);
+    loadJSON((urlParams.get('json') || 'rh-raw') + '.json', render);
+}
 </script>
 </head>
 <body>
 <H1>Test Page</H1>
+<template id="times_t">
+    {{#each sections}}
+        <h2>{{title}}</h2>
+        {{#each ITEMS}}
+            <br>TITLE: {{title}}
+            <br>COMMENT: {{comment}}
+            <br>TIME: {{time}}
+            <hr/>
+        {{/each}}
+    {{/each}}
+</template>
+<template id="time_t">
+</template>
+<div id="page">
+LOADING...
+</div>
 </body>
 </html>

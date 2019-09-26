@@ -8,7 +8,7 @@ $4          {
                 if (!current) {
                     gsub("\"","@",prev)
                     print " \"BANNER\" : { \"PARSHA\" : \"" prev "\"},"
-                    print " \"PAGES\" : ["
+                    print " \"TIMES\" : ["
                     print "   ["
                 }
                 if (section != current) {
