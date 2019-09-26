@@ -49,7 +49,9 @@ function render(obj) {
     console.log('# of pages:', obj.pages.length)
     for (page of obj.pages) {
         console.log('compiling page')
-        pages.push(times_render(page).replace(/@/g,'"'))
+        html = times_render(page).replace(/@/g,'"'))
+        console.log(html)
+        pages.push(html)
     }
     page_div = document.getElementById("main")
     page_div.innerHTML = pages[0]
