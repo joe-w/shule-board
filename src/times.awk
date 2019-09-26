@@ -3,10 +3,10 @@ BEGIN       {
                 current = "";
                 print "{";
              }
-$2          { prev=section; section=$2; gsub("\"","@",section); }
+$2          { prev=section; section=$2; gsub("\"","\\\"",section); }
 $4          {
                 if (!current) {
-                    gsub("\"","@",prev)
+                    gsub("\"","\\\"",prev)
                     print " \"BANNER\" : { \"PARSHA\" : \"" prev "\"},"
                     print " \"pages\" : ["
                     print "   { \"sections\": ["
@@ -18,8 +18,8 @@ $4          {
                 } else {
                     print "  ,"
                 }
-                gsub("\"","@",$3)
-                gsub("\"","@",$4)
+                gsub("\"","\\\"",$3)
+                gsub("\"","\\\"",$4)
                 print "   {\"time\": \"" $4 "\", ";
                 if (match($3, /\(.*\)\s*/)) {
                     print "    \"comment\": \"" substr($3, RSTART, RLENGTH) "\","
