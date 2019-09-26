@@ -24,7 +24,6 @@ function announce() {
     if (a_index == announcements.length) { a_index = 0; }
 }
 
-alert('hello-world')
 console.log('in script')
 function loadJSON(path, callback) {   
     console.log('loading JSON:', path)
@@ -56,7 +55,6 @@ function render(obj) {
 }
 
 window.onload = function() {
-    alert('onload');
     announce();
     setInterval(announce, 5000);
     console.log('in onload');
