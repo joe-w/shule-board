@@ -69,8 +69,8 @@ for (var i=0; i < announcements.length; i++) {
 window.onload = function() {
     // announce();
     // setInterval(announce, 5000);
-    rotate('announcements', announcements)
-    setInterval(rotate, 5000, 'announcements', announcements);
+    rotate('announcement', announcements)
+    setInterval(rotate, 5000, 'announcement', announcements);
     console.log('in onload');
     loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
 }
