@@ -3,6 +3,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.3.1/handlebars.min.js"></script>
 <script>
 function loadJSON(path, callback) {   
+    console.log('loading JSON:', path)
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', path, true);
@@ -27,11 +28,12 @@ function render(obj) {
         console.log('compiling page')
         pages.push(times_render(page))
     }
-    page_div = document.getElementById("page")
+    page_div = document.getElementById("main")
     page_div.innerHTML = pages[0]
 }
 
 window.onload = function() {
+    console.log('in onload')
     var urlParams = new URLSearchParams(window.location.search);
     loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json', render);
 }
@@ -71,29 +73,31 @@ window.onload = function() {
     <div id="main" class="panel main">
     </div>
 
-    <template id="times_t">
-     {{#each sections}}
-        <div class="section">
-          <div class="title">{{title}}</div> <p/>
-          <div style="display: grid">
-            {{#each items}}
-                <div class="item">
-                    <span class="name">{{title}}</span>
-                    <span class="comment">{{comment}}</span>
-                    <span class="time" style="float: left;">{{time}}</span>
-                </div>
-            {{/each}}
-          </div>
-        </div>
-     {{/each}}
-    </template>>
-
     <div class="panel announce">
         <div id="announcement" class="announcement">
         </div>
     </div>
+
     <div class="footer">
             &nbsp; לוח המודעות נתרמה לזכרו של בנינו היקר אברהם דניאל ז"ל בן יוסף ודבורה וויסבלט  &nbsp;
     </div>
 </div>
+
+<template id="times_t">
+ {{#each sections}}
+    <div class="section">
+      <div class="title">{{title}}</div> <p/>
+      <div style="display: grid">
+        {{#each items}}
+            <div class="item">
+                <span class="name">{{title}}</span>
+                <span class="comment">{{comment}}</span>
+                <span class="time" style="float: left;">{{time}}</span>
+            </div>
+        {{/each}}
+      </div>
+    </div>
+ {{/each}}
+</template>>
+
 </html>
