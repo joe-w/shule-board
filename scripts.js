@@ -38,6 +38,17 @@ function loadJSON(path, callback) {
     xobj.send(null);  
 }
 
+var rotations = new Map()
+function rotate(name, array, delay) {
+    index = rotations[name] || 0;
+    document.getElementById(name).innerHTML = array[index];
+    rotations[name] = index + 1;
+    if (rotations[name] == array.length) { rotations[name] = 0; }
+    if (delay) {
+        setInterval(rotate, delay, name, array, 0)
+    }
+}
+
 function render(obj) {
     console.log('in render')
     times_t = document.getElementById("times_t").innerHTML
@@ -52,14 +63,7 @@ function render(obj) {
     }
     page_div = document.getElementById("main")
     page_div.innerHTML = pages[0]
-}
-
-var rotations = new Map()
-function rotate(name, array) {
-    index = rotations[name] || 0;
-    document.getElementById(name).innerHTML = array[index];
-    rotations[name] = index + 1;
-    if (rotations[name] == array.length) { rotations[name] = 0; }
+    rotate('main', pages, 2000)
 }
 
 for (var i=0; i < announcements.length; i++) {
@@ -69,9 +73,7 @@ for (var i=0; i < announcements.length; i++) {
 window.onload = function() {
     // announce();
     // setInterval(announce, 5000);
-    rotate('announcement', announcements)
-    setInterval(rotate, 5000, 'announcement', announcements);
-    console.log('in onload');
+    rotate('announcement', announcements, 5000)
     loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
 }
 
