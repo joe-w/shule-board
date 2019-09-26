@@ -43,7 +43,6 @@ function render(obj) {
     console.log('in render')
     times_t = document.getElementById("times_t").innerHTML
     console.log('found template')
-    console.log('Handlebars:', Handlebars)
     times_render = Handlebars.compile(times_t)
     console.log('compiled template')
     pages = []

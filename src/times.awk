@@ -13,7 +13,7 @@ $4          {
                 }
                 if (section != current) {
                     if (current) print "   ]},";
-                    print "   { \"title\": \"" section "\", \"ITEMS\": [";
+                    print "   { \"title\": \"" section "\", \"items\": [";
                     current = section;
                 } else {
                     print "  ,"
