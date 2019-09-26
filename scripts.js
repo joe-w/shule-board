@@ -54,7 +54,7 @@ function render(obj) {
     page_div.innerHTML = pages[0]
 }
 
-var rotations
+var rotations = new Map()
 function rotate(name, array) {
     index = rotations[name] || 0;
     document.getElementById(name).innerHTML = array[index];
