@@ -61,8 +61,6 @@ function render(obj) {
         console.log('compiling page')
         pages.push(times_render(page).replace(/@/g,'"'))
     }
-    page_div = document.getElementById("main")
-    page_div.innerHTML = pages[0]
     rotate('main', pages, 2000)
 }
 
