@@ -54,9 +54,23 @@ function render(obj) {
     page_div.innerHTML = pages[0]
 }
 
+var rotations
+function rotate(name, array) {
+    index = rotations[name] || 0;
+    document.getElementById(name).innerHTML = array[index];
+    rotations[name] = index + 1;
+    if (rotations[name] == array.length) { rotations[name] = 0; }
+}
+
+for (var i=0; i < announcements.length; i++) {
+    announcements[i] = announcements[i].replace(/(?:\r\n|\r|\n)/g, '<br>');
+}
+
 window.onload = function() {
-    announce();
-    setInterval(announce, 5000);
+    // announce();
+    // setInterval(announce, 5000);
+    rotate('announcements', announcements)
+    setInterval(rotate, 5000, 'announcements', announcements);
     console.log('in onload');
     loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
 }
