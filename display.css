@@ -56,6 +56,7 @@ div.panel {
 }
 
 .title {
+    direction: rtl;
     width: auto;
     float: right;
     margin-top: -0.4em;
@@ -72,7 +73,7 @@ div.panel {
     font-weight: normal;
     width: 90%;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .halfitem {
@@ -95,7 +96,7 @@ div.panel {
 
 .comment {
     direction: rtl;
-    font-size: 0.7em;
+    font-size: 0.6em;
     line-height: 1em;
     float: right;
     padding: 0.5em 0.5em;
