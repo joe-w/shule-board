@@ -4,6 +4,12 @@ BEGIN       {
                 print "{";
              }
 $2          { prev=section; section=$2; gsub("\"","@",section); }
+$1 == "-"   {
+                if (prev) {
+                    print "    ]}]},{ \"sections\": [";
+                    current = "-";
+                }
+            }
 $4          {
                 if (!current) {
                     gsub("\"","@",prev)
@@ -12,7 +18,7 @@ $4          {
                     print "   { \"sections\": ["
                 }
                 if (section != current) {
-                    if (current) print "   ]},";
+                    if (current && current != "-") print "   ]},";
                     print "   { \"title\": \"" section "\", \"items\": [";
                     current = section;
                 } else {
