@@ -32,10 +32,8 @@ function render(obj) {
 }
 
 window.onload = function() {
-    alert('hello')
-    console.log
     var urlParams = new URLSearchParams(window.location.search);
-    loadJSON((urlParams.get('json') || 'rh-raw') + '.json', render);
+    loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json', render);
 }
 </script>
     <link rel="stylesheet" href="./display.css"/>
