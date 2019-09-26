@@ -15,12 +15,15 @@ function loadJSON(path, callback) {
 }
 
 function render(obj) {
-    console.log(obj)
-    console.log(JSON.stringify(obj))
+    console.log('in render')
     times_t = document.getElementById("times_t").innerHTML
+    console.log('found template')
     times_render = Handlebars.compile(times_t)
+    console.log('compiled template')
     pages = []
-    for (page of obj.PAGES) {
+    console.log('# of pages:', obj.pages.length)
+    for (page of obj.pages) {
+        console.log('compiling page')
         pages.push(times_render(page))
     }
     page_div = document.getElementById("page")

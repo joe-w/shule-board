@@ -8,8 +8,8 @@ $4          {
                 if (!current) {
                     gsub("\"","@",prev)
                     print " \"BANNER\" : { \"PARSHA\" : \"" prev "\"},"
-                    print " \"TIMES\" : ["
-                    print "   ["
+                    print " \"pages\" : ["
+                    print "   { \"sections\": ["
                 }
                 if (section != current) {
                     if (current) print "   ]},";
@@ -31,9 +31,8 @@ $4          {
                 print "   }";
             }
 END         {
-                print "   ]}";
+                print "   ]}]}";
                 print "  ]";
-                print " ]";
                 print "}";
             }
 '
