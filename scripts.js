@@ -1,7 +1,7 @@
 // Load CSS
 var urlParams = new URLSearchParams(window.location.search);
 var link = document.createElement( "link" );
-link.href = (urlParams.get('css') || 'stone-green') + '.css';
+link.href = (urlParams.get('css') || 'stone-green') + '.css?no-cache';
 link.type = "text/css";
 link.rel = "stylesheet";
 document.getElementsByTagName( "head" )[0].appendChild( link );
@@ -58,6 +58,6 @@ window.onload = function() {
     announce();
     setInterval(announce, 5000);
     console.log('in onload');
-    loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json', render);
+    loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
 }
 
