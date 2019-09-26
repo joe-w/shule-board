@@ -1,7 +1,11 @@
 <html>
 <head>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.3.1/handlebars.min.js"></script>
-<script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.3.1/handlebars.min.js"></script>
+    <link rel="stylesheet" href="./display.css"/>
+    <script type="text/javascript" src="./scripts.js"></script>
+<script type=text/javascript">
+alert('hello-world')
+console.log('in script')
 function loadJSON(path, callback) {   
     console.log('loading JSON:', path)
     var xobj = new XMLHttpRequest();
@@ -33,14 +37,14 @@ function render(obj) {
 }
 
 window.onload = function() {
-    console.log('in onload')
+    alert('onload');
+    console.log('in onload');
     var urlParams = new URLSearchParams(window.location.search);
     loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json', render);
 }
 </script>
-    <link rel="stylesheet" href="./display.css"/>
-    <script type="text/javascript" src="./scripts.js"></script>
 </head>
+
 <div class="bg" style="display: grid; xgrid-template-areas:
     'banner'
     'main'
@@ -99,5 +103,4 @@ window.onload = function() {
     </div>
  {{/each}}
 </template>>
-
 </html>
