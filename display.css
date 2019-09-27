@@ -116,8 +116,10 @@ div.bg {
   x-transform: rotate(-90deg);
   x-transform-origin: 35cm 20cm;
   display: grid;
-  height: 70cm;
-  width: 40cm;
+  x-height: 70cm;
+  x-width: 40cm;
+  height: 100%;
+  width: 100%;
   padding: 10px;
   /* base font size, everything else should #em */
   font-size: 28;
