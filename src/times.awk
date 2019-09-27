@@ -1,15 +1,11 @@
 tr -s '\r\n' '\n' < rh.tsv | awk -F '\t' '
 BEGIN       {
                 current = "";
+                pagebreak = 0
                 print "{";
              }
-$2          { prev=section; section=$2; gsub("\"","@",section); }
-$1 == "-"   {
-                if (prev) {
-                    print "    ]}]},{ \"sections\": [";
-                    current = "-";
-                }
-            }
+$2 != ""    { prev=section; section=$2; gsub("\"","@",section); }
+$4 == ""    { pagebreak = 1; }
 $4          {
                 if (!current) {
                     gsub("\"","@",prev)
@@ -18,7 +14,14 @@ $4          {
                     print "   { \"sections\": ["
                 }
                 if (section != current) {
-                    if (current && current != "-") print "   ]},";
+                    if (current) {
+                        if (pagebreak == 1) {
+                            print "    ]}]},{ \"sections\": [";
+                        } else {
+                            print "   ]},";
+                        }
+                    }
+                    pagebreak = 0;
                     print "   { \"title\": \"" section "\", \"items\": [";
                     current = section;
                 } else {
