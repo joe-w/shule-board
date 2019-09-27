@@ -4,7 +4,8 @@
 }
 
 div.bg {
-  background-image: url("./jstone2.jpg");
+  x-background-image: url("./jstone2.jpg");
+  background-image: url("./shofar1.jpg");
   background-size: 100% 100%;
   x-background-size: cover;
 }
