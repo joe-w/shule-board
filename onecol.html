@@ -18,17 +18,14 @@
 }
 .bg {
     margin: -10;
+    display: grid;
+    grid-row-gap: 7px;
+    grid-template-rows: 8cm auto 8cm 1cm;
 }
 </style>
 </head>
 
-<div class="bg" style="display: grid; xgrid-template-areas:
-    'banner'
-    'main'
-    'announce'
-    'footer'; grid-row-gap: 7px; grid-template-rows: 8cm auto 8cm 1cm;
-    ">
-
+<div class="bg">
     <div class="panel banner" style="display: grid; grid-template-areas:
         'parsha . logo'
         'shabbat-in . logo'
@@ -58,13 +55,14 @@
         <div id="announcement" class="announcement">
         </div>
     </div>
+<div class="footer">
+        &nbsp; לוח המודעות נתרמה לזכרו של בנינו היקר אברהם דניאל ז"ל בן יוסף ודבורה וויסבלט  &nbsp;
+</div>
 
-    <div class="footer">
-            &nbsp; לוח המודעות נתרמה לזכרו של בנינו היקר אברהם דניאל ז"ל בן יוסף ודבורה וויסבלט  &nbsp;
-    </div>
 </div>
 
 <template id="times_t">
+ <div style="height: auto">
  {{#each sections}}
     <div class="section">
       <div class="title">{{title}}</div> <p/>
@@ -79,5 +77,6 @@
       </div>
     </div>
  {{/each}}
+ </div>
 </template>>
 </html>
