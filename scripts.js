@@ -1,7 +1,7 @@
 // Load CSS
 var urlParams = new URLSearchParams(window.location.search);
 var link = document.createElement( "link" );
-link.href = (urlParams.get('css') || 'stone-green') + '.css?no-cache';
+link.href = (urlParams.get('css') || 'style') + '.css?no-cache';
 link.type = "text/css";
 link.rel = "stylesheet";
 document.getElementsByTagName( "head" )[0].appendChild( link );
@@ -61,7 +61,7 @@ function render(obj) {
         console.log('compiling page')
         pages.push(times_render(page).replace(/@/g,'"'))
     }
-    rotate('main', pages, 2000)
+    rotate('main', pages, 5000)
 }
 
 for (var i=0; i < announcements.length; i++) {
@@ -71,7 +71,7 @@ for (var i=0; i < announcements.length; i++) {
 window.onload = function() {
     // announce();
     // setInterval(announce, 5000);
-    rotate('announcement', announcements, 5000)
-    loadJSON('src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
+    rotate('announcement', announcements, 3000)
+    loadJSON('https://joe-w.github.io/shule-board/src/' + (urlParams.get('json') || 'rh-raw') + '.json?no-cache', render);
 }
 

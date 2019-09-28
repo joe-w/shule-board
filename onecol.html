@@ -1,28 +1,22 @@
 <html>
 <head>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.3.1/handlebars.min.js"></script>
-    <link rel="stylesheet" href="./display.css?no-cache"/>
+    <link rel="stylesheet" href="./layout.css?no-cache"/>
     <script type="text/javascript" src="./scripts.js?no-cache"></script>
 <style>
 /* Style overrides */
-.item {
-    width: 90%;
-}
 .time {
     font-family: 'arial';
+    vertical-align: middle;
     x-font-weight: normal;
 }
 .comment {
     font-family: 'arial';
-    font-size: 0.7em;
 }
 .bg {
-    x-margin: -10;
-    x-height: 100%;
-    x-width: 100%;
     display: grid;
-    grid-row-gap: 7px;
-    grid-template-rows: 10% 78% 10% 2%;
+    grid-row-gap: 1%;
+    grid-template-rows: 10% 72% 13% 2%;
     x-grid-template-rows: 8cm auto 8cm 1cm;
 }
 </style>
@@ -72,14 +66,14 @@
       <div style="display: grid">
         {{#each items}}
             <div class="item">
-                <span class="name">{{title}}</span>
-                <span class="comment">{{comment}}</span>
-                <span class="time" style="float: left;">{{time}}</span>
+                <div class="time">{{time}}</div>
+                <div class="name">{{title}}</div>
+                <div class="comment">{{comment}}</div>
             </div>
         {{/each}}
       </div>
     </div>
  {{/each}}
  </div>
-</template>>
+</template>
 </html>

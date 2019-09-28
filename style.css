@@ -1,0 +1,48 @@
+:root {
+    --color1: #004000;
+    --color2: #F5F5DC;
+}
+
+div.bg {
+  background-image: url("./jstone2.jpg");
+  x-background-image: url("./shofar1.jpg");
+  x-background-size: 100% 100%;
+  x-background-size: cover;
+}
+
+div.panel {
+  opacity: 0.7;
+  color: var(--color2);
+  x-font-size: 28;
+  font-weight: bold;
+  x-border-radius: 10px;
+  border-radius: 1em;
+}
+
+div.banner {
+  opacity: 0.75;
+  background-color: var(--color1);
+  text-shadow: 0.1em 0.1em 0.1em #894625;
+}
+
+div.main {
+  color: var(--color1);
+  background-color: var(--color2);
+  opacity: 0.85;
+}
+
+.title {
+  background-color: var(--color2);
+}
+
+div.announce {
+  background-color: var(--color1);
+}
+
+div.footer {
+  x-background-color: grey
+}
+
+.halfitem {
+    font-size: 1.9em;
+}
