@@ -119,8 +119,9 @@ div.bg {
   x-height: 70cm;
   x-width: 40cm;
   height: 100%;
-  width: 100%;
+  x-width: 100%;
   padding: 10px;
+  padding-right: 56.25%;
   /* base font size, everything else should #em */
   font-size: 28;
   font-weight: bold;
