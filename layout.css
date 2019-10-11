@@ -31,15 +31,16 @@ div.panel {
 
 .logo {
     line-height: 1;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 #parsha {
-    font-size: 1.5em;
+    font-size: 2.6em;
     text-align: center;
 }
 
 .candle {
+    font-size: 2.2em;
     width: 90%;
     line-height: 1.4em;
 }
@@ -63,14 +64,13 @@ div.panel {
     font-size: 1.5em;
     font-weight: bolder;
     line-height: 0.6em;
-    xtext-decoration: underline;
 }
 
 .item {
     font-weight: normal;
     x-width: 90%;
     margin: auto 0.5em;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .halfitem {
@@ -96,8 +96,6 @@ div.panel {
     font-size: 0.7em;
     float: right;
     margin: 0.3em 0.5em;
-    x-height: 2.5em;
-    x-vertical-align: center;
 }
 
 .time {
@@ -107,8 +105,6 @@ div.panel {
 }
 
 body {
-   x-transform: scale(0.4);
-   x-transform-origin: 0 0;
 }
 
 div.bg {
@@ -118,6 +114,9 @@ div.bg {
   /* base font size, everything else should #em */
   font-size: 2.5vw;
   font-weight: bold;
+  /* TV cutting top/bottom */
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 div.banner {

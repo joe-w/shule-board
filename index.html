@@ -1,14 +1,28 @@
 <html>
-Two tries below.
-<p/>
-I'm new to all this CSS, so pages are not responsive,
-but fixed to the size of the TV screen.
-<p/>
-<a href="./display.html?css=stone-green"><h1>PDF-like w/ stone-green theme</h1></a>
-<p/>
-<a href="./display.html?css=wood"><h1>PDF-like w/ wood theme</h1></a>
-<p/>
-<a href="./display2.html?css=wood"><h1>Modified layout w/ wood theme</h1></a>
-<p/>
-<a href="./display2.html?css=stone-green"><h1>Modified layout w/ stone-green theme</h1></a>
+<script>
+function get_page() {
+    page = document.getElementById("page").value
+    css = document.getElementById("css").value
+    url = "./" + page + ".html?css=" + css
+    alert('location=' + url)
+    window.location.href = url
+}
+</script>
+<body>
+<form action="javascript:get_page()">
+    <select style="font-size: 25px;" id="page" name="page" size="1">
+      <option value="display">Shabbat PDF-like</option>
+      <option value="display2">Shabbat reformatted</option>
+      <option value="onecol">Rosh-Hashana (one-off w/ paging)</option>
+    </select>
+    <br/>
+    <select style="font-size: 25px;" id="css" name="css" size="1">
+      <option value="stone-green">stone-green</option>
+      <option value="stone-blue">stone-blue</option>
+      <option value="wood">parchment-wood</option>
+    </select>
+    <p/>
+    <button style="font-size: 25px;" onclick="get_page()">Show Page</button>
+</form>
+</body>
 </html>
