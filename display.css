@@ -108,24 +108,13 @@ div.panel {
 }
 
 body {
-   x-transform: scale(0.4);
-   x-transform-origin: 0 0;
 }
 
 div.bg {
-  x-transform: rotate(-90deg);
-  x-transform-origin: 35cm 20cm;
   display: grid;
-  x-height: 70cm;
-  x-width: 40cm;
-  x-height: 100%;
-  x-width: 45.75%;
-  x-padding: 10px;
-  x-padding-right: 28.12%;
-  x-padding-left: 28.12%;
+  width: 100%; height: 178vw;
   /* base font size, everything else should #em */
-  x-font-size: 2vh;
-  width: 100%; height: 178vw; font-size: 3vh;
+  font-size: 3vh;
   padding-top: 2%;
   padding-bottom: 2%;
   font-weight: bold;

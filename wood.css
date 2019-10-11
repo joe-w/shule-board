@@ -22,7 +22,6 @@ div.banner {
   opacity: 1;
   background-image: url("./mahogany.jpg");
   background-size: cover;
-  xtext-shadow: 3px 3px 3px gold;
 }
 
 div.main {
@@ -39,9 +38,7 @@ div.announce {
   opacity: 1;
   background-image: url("./mahogany.jpg");
   background-size: cover;
-  x-text-shadow: 2px 2px 2px gold;
 }
 
 div.footer {
-  xbackground-color: lightgrey
 }
